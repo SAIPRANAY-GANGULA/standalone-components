@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'standalone-inject'`, () => {
+  it(`should have as title 'angular-standalone-components-example'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('standalone-inject');
+    expect(app.title).toEqual('angular-standalone-components-example');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('standalone-inject app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-standalone-components-example app is running!');
   });
 });
