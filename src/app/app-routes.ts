@@ -6,4 +6,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./user/user.component').then((m) => m.UserComponent),
   },
+  //lazy-load multiple routes
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.routes').then((m) => m.homeRoutes),
+  },
 ];
